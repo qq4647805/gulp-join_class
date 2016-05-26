@@ -1,0 +1,29 @@
+{
+  "name": "gulp-join_class",
+  "version": "1.0.0",
+  "description": "组合html里面的class",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "lxx",
+  "license": "MIT",
+  "dependencies": {
+    "jquery": "^2.2.4",
+    "jsdom": "^9.2.0"
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/qq4647805/gulp-join_class.git"
+  },
+  "keywords": [
+    "html",
+    "class",
+    "gulp"
+  ],
+  "bugs": {
+    "url": "https://github.com/qq4647805/gulp-join_class/issues"
+  },
+  "homepage": "https://github.com/qq4647805/gulp-join_class#readme"
+}
