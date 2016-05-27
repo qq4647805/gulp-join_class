@@ -12,35 +12,51 @@ var join_class = require('gulp-join_class');
 gulp.task("join", function() {
 	gulp.src(["src/*.html"]).pipe(join_class()).pipe(gulp.dest('dist/'));
 });
+```
 
-### 原来
+### before
 ```html
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>Document</title>
 </head>
-<body id="abc">
+<body id="body">
     <div class="@a">
-        <p class="@-plap-btn">
-            <span class="@-c c b"></span>
-        </p>
-        <div>
-            <div class="@-ddd">
-                <div class="@-sss"></div>
-            </div>
-        </div>
-    </div>
-    <div class="@asd">
-        <div class="@-sdsd">
-            <div class="@-a">
-                <div class="sd">
-                    <div class="@-b"></div>
+        <div class="@-b e @-b-f">
+            <div class="@-c d">
+                <div>
+                    <div class="@-aaa"></div>
                 </div>
+            </div>
+            <div class="@-abc">
+                <div class="@-abc-cba"></div>
             </div>
         </div>
     </div>
 </body>
 </html>
+```
+### after
+```html
+<!DOCTYPE html><html lang="en"><head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body id="body">
+    <div class="a">
+        <div class="a-b e @-b-f">
+            <div class="a-b-c d">
+                <div>
+                    <div class="a-b-c-aaa"></div>
+                </div>
+            </div>
+            <div class="a-b-abc">
+                <div class="a-b-abc-abc-cba"></div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+```
