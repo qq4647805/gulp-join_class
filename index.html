@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="UTF-8">
+    <title>Gulp-join class by qq4647805</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
+  </head>
+  <body>
+    <section class="page-header">
+      <h1 class="project-name">Gulp-join class</h1>
+      <h2 class="project-tagline">组合html里面的class</h2>
+      <a href="https://github.com/qq4647805/gulp-join_class" class="btn">View on GitHub</a>
+      <a href="https://github.com/qq4647805/gulp-join_class/zipball/master" class="btn">Download .zip</a>
+      <a href="https://github.com/qq4647805/gulp-join_class/tarball/master" class="btn">Download .tar.gz</a>
+    </section>
+
+    <section class="main-content">
+      <h1>
+<a id="gulp-join_class" class="anchor" href="#gulp-join_class" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>gulp-join_class</h1>
+
+<h3>
+<a id="gulp插件-组合html里面的class" class="anchor" href="#gulp%E6%8F%92%E4%BB%B6-%E7%BB%84%E5%90%88html%E9%87%8C%E9%9D%A2%E7%9A%84class" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>gulp插件 组合html里面的class</h3>
+
+<h4>
+<a id="homepage" class="anchor" href="#homepage" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a><a href="https://qq4647805.github.io/gulp-join_class">homepage</a>
+</h4>
+
+<h4>
+<a id="github--httpsgithubcomqq4647805gulp-join_class" class="anchor" href="#github--httpsgithubcomqq4647805gulp-join_class" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a><a href="https://github.com/qq4647805/gulp-join_class">github : https://github.com/qq4647805/gulp-join_class</a>
+</h4>
+
+<div class="highlight highlight-source-js"><pre><span class="pl-k">var</span> join_class <span class="pl-k">=</span> <span class="pl-c1">require</span>(<span class="pl-s"><span class="pl-pds">'</span>gulp-join_class<span class="pl-pds">'</span></span>);
+
+<span class="pl-smi">gulp</span>.<span class="pl-en">task</span>(<span class="pl-s"><span class="pl-pds">"</span>join<span class="pl-pds">"</span></span>, <span class="pl-k">function</span>() {
+    <span class="pl-smi">gulp</span>.<span class="pl-en">src</span>([<span class="pl-s"><span class="pl-pds">"</span>src/*.html<span class="pl-pds">"</span></span>]).<span class="pl-en">pipe</span>(<span class="pl-en">join_class</span>()).<span class="pl-en">pipe</span>(<span class="pl-smi">gulp</span>.<span class="pl-en">dest</span>(<span class="pl-s"><span class="pl-pds">'</span>dist/<span class="pl-pds">'</span></span>));
+});</pre></div>
+
+<h3>
+<a id="before" class="anchor" href="#before" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>before</h3>
+
+<div class="highlight highlight-text-html-basic"><pre>&lt;!DOCTYPE html&gt;
+&lt;<span class="pl-ent">html</span> <span class="pl-e">lang</span>=<span class="pl-s"><span class="pl-pds">"</span>en<span class="pl-pds">"</span></span>&gt;
+&lt;<span class="pl-ent">head</span>&gt;
+    &lt;<span class="pl-ent">meta</span> <span class="pl-e">charset</span>=<span class="pl-s"><span class="pl-pds">"</span>UTF-8<span class="pl-pds">"</span></span>&gt;
+    &lt;<span class="pl-ent">title</span>&gt;Document&lt;/<span class="pl-ent">title</span>&gt;
+&lt;/<span class="pl-ent">head</span>&gt;
+&lt;<span class="pl-ent">body</span> <span class="pl-e">id</span>=<span class="pl-s"><span class="pl-pds">"</span>body<span class="pl-pds">"</span></span>&gt;
+    &lt;<span class="pl-ent">div</span> <span class="pl-e">class</span>=<span class="pl-s"><span class="pl-pds">"</span>@a<span class="pl-pds">"</span></span>&gt;
+        &lt;<span class="pl-ent">div</span> <span class="pl-e">class</span>=<span class="pl-s"><span class="pl-pds">"</span>@-b e @-b-f<span class="pl-pds">"</span></span>&gt;
+            &lt;<span class="pl-ent">div</span> <span class="pl-e">class</span>=<span class="pl-s"><span class="pl-pds">"</span>@-c d<span class="pl-pds">"</span></span>&gt;
+                &lt;<span class="pl-ent">div</span>&gt;
+                    &lt;<span class="pl-ent">div</span> <span class="pl-e">class</span>=<span class="pl-s"><span class="pl-pds">"</span>@-aaa<span class="pl-pds">"</span></span>&gt;&lt;/<span class="pl-ent">div</span>&gt;
+                &lt;/<span class="pl-ent">div</span>&gt;
+            &lt;/<span class="pl-ent">div</span>&gt;
+            &lt;<span class="pl-ent">div</span> <span class="pl-e">class</span>=<span class="pl-s"><span class="pl-pds">"</span>@-abc<span class="pl-pds">"</span></span>&gt;
+                &lt;<span class="pl-ent">div</span> <span class="pl-e">class</span>=<span class="pl-s"><span class="pl-pds">"</span>@-abc-cba<span class="pl-pds">"</span></span>&gt;&lt;/<span class="pl-ent">div</span>&gt;
+            &lt;/<span class="pl-ent">div</span>&gt;
+        &lt;/<span class="pl-ent">div</span>&gt;
+    &lt;/<span class="pl-ent">div</span>&gt;
+&lt;/<span class="pl-ent">body</span>&gt;
+&lt;/<span class="pl-ent">html</span>&gt;</pre></div>
+
+<h3>
+<a id="after" class="anchor" href="#after" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>after</h3>
+
+<div class="highlight highlight-text-html-basic"><pre>&lt;!DOCTYPE html&gt;&lt;<span class="pl-ent">html</span> <span class="pl-e">lang</span>=<span class="pl-s"><span class="pl-pds">"</span>en<span class="pl-pds">"</span></span>&gt;&lt;<span class="pl-ent">head</span>&gt;
+    &lt;<span class="pl-ent">meta</span> <span class="pl-e">charset</span>=<span class="pl-s"><span class="pl-pds">"</span>UTF-8<span class="pl-pds">"</span></span>&gt;
+    &lt;<span class="pl-ent">title</span>&gt;Document&lt;/<span class="pl-ent">title</span>&gt;
+&lt;/<span class="pl-ent">head</span>&gt;
+&lt;<span class="pl-ent">body</span> <span class="pl-e">id</span>=<span class="pl-s"><span class="pl-pds">"</span>body<span class="pl-pds">"</span></span>&gt;
+    &lt;<span class="pl-ent">div</span> <span class="pl-e">class</span>=<span class="pl-s"><span class="pl-pds">"</span>a<span class="pl-pds">"</span></span>&gt;
+        &lt;<span class="pl-ent">div</span> <span class="pl-e">class</span>=<span class="pl-s"><span class="pl-pds">"</span>a-b e @-b-f<span class="pl-pds">"</span></span>&gt;
+            &lt;<span class="pl-ent">div</span> <span class="pl-e">class</span>=<span class="pl-s"><span class="pl-pds">"</span>a-b-c d<span class="pl-pds">"</span></span>&gt;
+                &lt;<span class="pl-ent">div</span>&gt;
+                    &lt;<span class="pl-ent">div</span> <span class="pl-e">class</span>=<span class="pl-s"><span class="pl-pds">"</span>a-b-c-aaa<span class="pl-pds">"</span></span>&gt;&lt;/<span class="pl-ent">div</span>&gt;
+                &lt;/<span class="pl-ent">div</span>&gt;
+            &lt;/<span class="pl-ent">div</span>&gt;
+            &lt;<span class="pl-ent">div</span> <span class="pl-e">class</span>=<span class="pl-s"><span class="pl-pds">"</span>a-b-abc<span class="pl-pds">"</span></span>&gt;
+                &lt;<span class="pl-ent">div</span> <span class="pl-e">class</span>=<span class="pl-s"><span class="pl-pds">"</span>a-b-abc-abc-cba<span class="pl-pds">"</span></span>&gt;&lt;/<span class="pl-ent">div</span>&gt;
+            &lt;/<span class="pl-ent">div</span>&gt;
+        &lt;/<span class="pl-ent">div</span>&gt;
+    &lt;/<span class="pl-ent">div</span>&gt;
+&lt;/<span class="pl-ent">body</span>&gt;
+&lt;/<span class="pl-ent">html</span>&gt;</pre></div>
+
+      <footer class="site-footer">
+        <span class="site-footer-owner"><a href="https://github.com/qq4647805/gulp-join_class">Gulp-join class</a> is maintained by <a href="https://github.com/qq4647805">qq4647805</a>.</span>
+
+        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the <a href="https://github.com/jasonlong/cayman-theme">Cayman theme</a> by <a href="https://twitter.com/jasonlong">Jason Long</a>.</span>
+      </footer>
+
+    </section>
+
+  
+  </body>
+</html>
