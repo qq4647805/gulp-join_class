@@ -1,6 +1,6 @@
 {
   "name": "gulp-join_class",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "组合html里面的class",
   "main": "index.js",
   "scripts": {
@@ -25,5 +25,5 @@
   "bugs": {
     "url": "https://github.com/qq4647805/gulp-join_class/issues"
   },
-  "homepage": "https://github.com/qq4647805/gulp-join_class#readme"
+  "homepage": "https://github.com/qq4647805/gulp-join_class"
 }
